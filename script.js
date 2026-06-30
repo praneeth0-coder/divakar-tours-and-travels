@@ -196,20 +196,20 @@ document.addEventListener('DOMContentLoaded', () => {
   function sendWhatsAppNotification(data) {
     const ownerNumber = '917702325873'; // Owner number: +91 77023 25873
     
-    // Construct premium formatted message
+    // Construct premium formatted message using standard ASCII characters
     const messageText = 
-`*NEW INQUIRY - DIVAKAR TRAVELS* 🚗✨
---------------------------------------
-👤 *Customer:* ${data.name}
-📞 *Phone:* ${data.phone}
-📧 *Email:* ${data.email}
-📍 *Pickup:* ${data.pickup}
-🏁 *Destination:* ${data.destination}
-📅 *Travel Date:* ${data.travel_date}
-👥 *Passengers:* ${data.passengers}
-📝 *Notes:* ${data.message || 'None'}
---------------------------------------
-Saved in database: ✅`;
+`*NEW INQUIRY - DIVAKAR TRAVELS*
+======================================
+* Customer: ${data.name}
+* Phone: ${data.phone}
+* Email: ${data.email}
+* Pickup: ${data.pickup}
+* Destination: ${data.destination}
+* Travel Date: ${data.travel_date}
+* Passengers: ${data.passengers}
+* Notes: ${data.message || 'None'}
+======================================
+[ Inquiry Saved In Database ]`;
 
     const encodedText = encodeURIComponent(messageText);
     const whatsappUrl = `https://wa.me/${ownerNumber}?text=${encodedText}`;
