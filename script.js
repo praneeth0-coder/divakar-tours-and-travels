@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Construct premium formatted message using standard ASCII characters
     const messageText = 
-`*NEW INQUIRY - DIVAKAR TRAVELS*
+`*NEW INQUIRY - DIVAKAR TOURS AND TRAVELS*
 ======================================
 * Customer: ${data.name}
 * Phone: ${data.phone}
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dashboardHtml = `
       <div id="admin-dashboard-panel" class="admin-panel">
         <div class="admin-panel-header">
-          <h3>🔐 Divakar Travels - Admin Database View</h3>
+          <h3>🔐 Divakar Tours and Travels - Admin Database View</h3>
           <button id="admin-close-btn" class="admin-close">&times;</button>
         </div>
         <div class="admin-panel-body">
